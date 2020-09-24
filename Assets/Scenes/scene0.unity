@@ -174,7 +174,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8826a97e5221b9a4a90284c410f10609, type: 2}
+  - {fileID: 2100000, guid: 75a3281f73050a8409c42ae10613b873, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -392,6 +392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1110221711}
   - component: {fileID: 1110221710}
+  - component: {fileID: 1110221712}
   m_Layer: 0
   m_Name: Slingshot
   m_TagString: Untagged
@@ -430,6 +431,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -15, z: 0}
+--- !u!114 &1110221712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110221709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b73569c59cef34eb8626b05dcb65e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launchPoint: {fileID: 0}
 --- !u!1 &1134253714
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +495,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8826a97e5221b9a4a90284c410f10609, type: 2}
+  - {fileID: 2100000, guid: 75a3281f73050a8409c42ae10613b873, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -562,7 +576,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8826a97e5221b9a4a90284c410f10609, type: 2}
+  - {fileID: 2100000, guid: 75a3281f73050a8409c42ae10613b873, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -601,6 +615,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1534632908}
+  - component: {fileID: 1534632909}
   m_Layer: 0
   m_Name: LaunchPoint
   m_TagString: Untagged
@@ -622,6 +637,18 @@ Transform:
   m_Father: {fileID: 1110221711}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!122 &1534632909
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534632907}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286743170
+  m_Size: 3
 --- !u!1 &2036979213
 GameObject:
   m_ObjectHideFlags: 0
