@@ -49,6 +49,7 @@ public class SlingshotController : MonoBehaviour
             aimMode = false;
             rbProjectile.isKinematic = false;
             rbProjectile.velocity = -mouseDelta * velocityMult;
+            CameraController.POI = projectile;
             projectile = null;
         }
     }
