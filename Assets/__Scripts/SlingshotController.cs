@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SlingshotController : MonoBehaviour
 {
+    static private SlingshotController s;
+
     [Header("Set in Unity")]
     public GameObject prefabProjectile;
     public float velocityMult;
@@ -14,10 +16,12 @@ public class SlingshotController : MonoBehaviour
     public GameObject projectile;
     public bool aimMode;
     private Rigidbody rbProjectile;
+    
 
 
     void Awake()
     {
+        s = this;
         Transform launchTrans = transform.Find("LaunchPoint");
         launchPoint = launchTrans.gameObject;
         launchPoint.SetActive(false);
@@ -51,6 +55,17 @@ public class SlingshotController : MonoBehaviour
             rbProjectile.velocity = -mouseDelta * velocityMult;
             CameraController.POI = projectile;
             projectile = null;
+            GameController.ShotFired();
+            LineController.s.poi = projectile;
+        }
+    }
+
+    static public Vector3 LAUNCH_POS
+    {   
+        get
+        {
+            if (s == null) return Vector3.zero;
+            return s.launchPos;
         }
     }
 
