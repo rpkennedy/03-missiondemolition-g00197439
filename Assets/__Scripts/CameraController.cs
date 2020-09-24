@@ -21,9 +21,27 @@ public class CameraController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (POI == null) return;
+        Vector3 dest;
 
-        Vector3 dest = POI.transform.position;
+        if (POI == null)
+        {
+            dest = Vector3.zero;
+        }
+        else
+        {
+            dest = POI.transform.position;
+
+            if(POI.tag == "Projectile")
+            {
+                if (POI.GetComponent<Rigidbody>().IsSleeping())
+                {
+                    POI = null;
+                    return;
+                }
+            }
+        }
+
+        dest.x = Mathf.Max(minXY.x, dest.x);
 
         dest.x = Mathf.Max(minXY.x, dest.x);
         dest.y = Mathf.Max(minXY.y, dest.y);
